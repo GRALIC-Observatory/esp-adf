@@ -152,4 +152,13 @@ set(COMPONENT_SRCS
 )
 endif()
 
+if (CONFIG_ESP32_S3_VA_LCKFB_SZPI_BOARD)
+message(STATUS "Current board name is " CONFIG_ESP32_S3_VA_LCKFB_SZPI_BOARD)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ./esp32_s3_va_lckfb_szpi)
+set(COMPONENT_SRCS
+./esp32_s3_va_lckfb_szpi/board.c
+./esp32_s3_va_lckfb_szpi/board_pins_config.c
+)
+endif()
+
 register_component()
