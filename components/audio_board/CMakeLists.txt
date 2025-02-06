@@ -143,4 +143,13 @@ set(COMPONENT_SRCS
 )
 endif()
 
+if (CONFIG_ESP32_S3_TOUCH_AMOLED_1_8_BOARD)
+message(STATUS "Current board name is " CONFIG_ESP32_S3_TOUCH_AMOLED_1_8_BOARD)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ./esp32_s3_touch_amoled_1_8)
+set(COMPONENT_SRCS
+./esp32_s3_touch_amoled_1_8/board.c
+./esp32_s3_touch_amoled_1_8/board_pins_config.c
+)
+endif()
+
 register_component()
